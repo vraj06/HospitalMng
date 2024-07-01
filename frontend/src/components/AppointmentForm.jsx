@@ -38,7 +38,7 @@ const AppointmentForm = () => {
   useEffect(() => {
     const fetchDoctors = async () => {
       const { data } = await axios.get(
-        "http://localhost:9845/api/v1/user/doctors",
+        "https://hms-backend-dep.onrender.com/api/v1/user/doctors",
         { withCredentials: true }
       );
       setDoctors(data.doctors);
@@ -50,7 +50,7 @@ const AppointmentForm = () => {
     const fetchBookedTimes = async () => {
       if (appointmentDate && department && doctorFirstName && doctorLastName) {
         const { data } = await axios.get(
-          "http://localhost:9845/api/v1/appointment/booked-times",
+          "https://hms-backend-dep.onrender.com/api/v1/appointment/booked-times",
           {
             params: {
               appointment_date: appointmentDate,
@@ -95,7 +95,7 @@ const AppointmentForm = () => {
     try {
       const hasVisitedBool = Boolean(hasVisited);
       const { data } = await axios.post(
-        "http://localhost:9845/api/v1/appointment/post",
+        "https://hms-backend-dep.onrender.com/api/v1/appointment/post",
         {
           firstName,
           lastName,

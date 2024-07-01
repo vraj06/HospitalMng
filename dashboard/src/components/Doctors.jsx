@@ -17,7 +17,7 @@ const Doctors = () => {
     const fetchDoctors = async () => {
       try {
         const { data } = await axios.get(
-          "http://localhost:9845/api/v1/user/doctors",
+          "https://hms-backend-dep.onrender.com/api/v1/user/doctors",
           { withCredentials: true }
         );
         setDoctors(data.doctors);
@@ -31,7 +31,7 @@ const Doctors = () => {
   const deleteDoctor = async (doctorId) => {
     try {
       await axios.delete(
-        `http://localhost:9845/api/v1/user/doctors/${doctorId}`,
+        `https://hms-backend-dep.onrender.com/api/v1/user/doctors/${doctorId}`,
         { withCredentials: true }
       );
       setDoctors(doctors.filter((doctor) => doctor._id !== doctorId));
@@ -84,7 +84,7 @@ const Doctors = () => {
       if (result.isConfirmed) {
         try {
           const { data } = await axios.put(
-            `http://localhost:9845/api/v1/user/doctors/${editDoctorData._id}`,
+            `https://hms-backend-dep.onrender.com/api/v1/user/doctors/${editDoctorData._id}`,
             editDoctorData,
             { withCredentials: true }
           );

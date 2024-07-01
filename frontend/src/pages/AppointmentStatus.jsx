@@ -13,7 +13,7 @@ const AppointmentStatus = () => {
 
     const fetchAppointments = async () => {
       try {
-        const response = await axios.get('http://localhost:9845/api/v1/appointment/status', {
+        const response = await axios.get('https://hms-backend-dep.onrender.com/api/v1/appointment/status', {
           withCredentials: true,
         });
         if (isMounted) {
