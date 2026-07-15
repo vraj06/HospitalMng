@@ -6,6 +6,10 @@ A full-stack Hospital Management System built to streamline hospital operations,
 
 HospitalMng is designed to help hospitals manage core day-to-day activities in one place. It includes separate modules for backend services, dashboard functionality, and frontend user experience.
 
+## Deployment
+
+Live Demo: **https://hospital-mng-sys.netlify.app**
+
 ## Features
 
 * Patient registration and management
@@ -71,17 +75,6 @@ JWT_SECRET=your_secret_key
 3. Open the application in your browser.
 4. Register or log in as a user, doctor, or admin depending on the role setup.
 5. Manage appointments, records, and hospital workflows.
-
-## Deployment
-
-Live Demo: **https://hospital-mng-sys.netlify.app**
-
-Example:
-
-```md
-Live Demo: https://hospital-mng-sys.netlify.app
-```
-
 
 
 ## Future Improvements
